@@ -101,3 +101,25 @@ document.getElementById('my_modal_1').showModal();
 
 
 });
+
+document.getElementById('donate-Q')
+            .addEventListener('click',function(event){
+    event.preventDefault();
+  const amountQ=inputElementById('input-Q');
+  const QCurrentAmount= textElementByID('current-Q');
+  const MyCurrentAmount=textElementByID('Your-current-amount');
+
+  console.log(amountQ,QCurrentAmount,MyCurrentAmount);
+  if(amountQ>MyCurrentAmount || amountQ<0){
+    alert('Not enough for flood');
+    return;
+  }
+  else{
+    document.getElementById('current-Q').innerText=QCurrentAmount+amountQ;
+    document.getElementById('Your-current-amount').innerText=MyCurrentAmount-amountQ;
+document.getElementById('my_modal_1').showModal();
+
+  }
+
+
+});
