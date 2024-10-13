@@ -66,8 +66,22 @@ document.getElementById('donateNoakhali')
 
     document.getElementById('my_modal_1').showModal();
  }
- 
 
+
+
+ const newElement=document.createElement('div');
+
+ newElement.classList.add('border');
+ newElement.classList.add('rounded-[10px]')
+ newElement.classList.add('p-[32px]')
+ newElement.classList.add('mt-2')
+ newElement.classList.add('mx-[50px]')
+ 
+ 
+newElement.innerHTML =
+        `<p class="font-bold">${Amount} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
+         Date :  ${new Date()} GMT +0600 (Bangladesh Standard Time)`
+    document.getElementById('transaction-container').appendChild(newElement);
 
 
 });
@@ -96,11 +110,30 @@ document.getElementById('my_modal_1').showModal();
   }
 
 
+const newElement=document.createElement('div');
+
+ newElement.classList.add('border');
+ newElement.classList.add('rounded-[10px]')
+ newElement.classList.add('p-[32px]')
+ newElement.classList.add('mt-2')
+ newElement.classList.add('mx-[50px]')
+ 
+ 
+newElement.innerHTML =
+        `<p class="font-bold">${amountFlood}  Taka is Donated for Flood Relief in Feni,Bangladesh</p>
+         Date :  ${new Date()} GMT +0600 (Bangladesh Standard Time)`
+    document.getElementById('transaction-container').appendChild(newElement);
+  
  
 
 
 
 });
+
+
+
+// Quota
+
 
 document.getElementById('donate-Q')
             .addEventListener('click',function(event){
@@ -122,4 +155,37 @@ document.getElementById('my_modal_1').showModal();
   }
 
 
+ const newElement=document.createElement('div');
+
+ newElement.classList.add('border');
+ newElement.classList.add('rounded-[10px]')
+ newElement.classList.add('p-[32px]')
+ newElement.classList.add('mt-2')
+ newElement.classList.add('mx-[50px]')
+ 
+ 
+newElement.innerHTML =
+        `<p class="font-bold">${amountQ} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
+         Date :  ${new Date()} GMT +0600 (Bangladesh Standard Time)`
+    document.getElementById('transaction-container').appendChild(newElement);
+
+
+
+});
+   
+
+// history page to donation page
+
+document.getElementById('Donation-btn').addEventListener('click',function(){
+     document.getElementById('transaction-container').classList.add('hidden');
+     document.getElementById('donation-page').classList.remove('hidden');
+});
+
+
+// donation page to history page
+
+document.getElementById('History-btn').addEventListener('click',function(){
+     document.getElementById('donation-page').classList.add('hidden');
+     document.getElementById('ftr').classList.add('hidden');
+     document.getElementById('transaction-container').classList.remove('hidden');
 });
